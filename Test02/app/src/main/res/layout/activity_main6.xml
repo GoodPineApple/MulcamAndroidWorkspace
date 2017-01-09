@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn01"
+        android:layout_toRightOf="@+id/edit01"
+
+        android:text="Check"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit01"
+        android:hint="Insert Your URL"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img01"
+        android:background="@drawable/star"
+        android:layout_below="@+id/btn01"
+
+        />
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Confirm01"-->
+        <!--android:id="@+id/btn02"-->
+        <!--android:layout_below="@+id/img01"-->
+        <!--android:layout_above="@id/btn03/>-->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm02"
+        android:id="@+id/btn03"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>
