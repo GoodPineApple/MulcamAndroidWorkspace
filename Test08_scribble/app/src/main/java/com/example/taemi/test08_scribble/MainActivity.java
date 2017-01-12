@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_red;
     private Button btn_blue;
     private Button btn_orange;
-    private String btnChecker;
+    private MyView myView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,26 +22,27 @@ public class MainActivity extends AppCompatActivity {
 
         btn_red = (Button) findViewById(R.id.btn_red);
         btn_blue = (Button) findViewById(R.id.btn_blue);
-        btn_orange = (Button) findViewById(R.id.btn_orange);
+        btn_orange = (Button) findViewById(R.id.btn_yellow);
+        myView = (MyView) findViewById(R.id.my_view);
 
         btn_red.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnChecker = "red";
+                myView.setBtninfo("red");
             }
         });
 
         btn_blue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnChecker = "blue";
+                myView.setBtninfo("blue");
             }
         });
 
         btn_orange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnChecker = "orange";
+                myView.setBtninfo("yellow");
             }
         });
     }

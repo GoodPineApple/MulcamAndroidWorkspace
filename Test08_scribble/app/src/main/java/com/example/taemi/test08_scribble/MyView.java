@@ -15,9 +15,7 @@ import android.widget.Button;
  */
 
 public class MyView extends View {
-    private Paint paint_red;
-    private Paint paint_blue;
-    private Paint paint_orange;
+    private Paint paint;
     private Path path_red;
     private Path path_blue;
     private Path path_orange;
@@ -27,36 +25,39 @@ public class MyView extends View {
         super(context,attr);
 
         path_red = new Path();
-        paint_red = new Paint();
-        paint_red.setStyle(Paint.Style.STROKE);
-        paint_red.setStrokeWidth(10f);
-        paint_red.setColor(Color.RED);
-        paint_red.setStrokeJoin(Paint.Join.ROUND);
-        paint_red.setAntiAlias(true);
+        paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(10f);
+        paint.setColor(Color.RED);
+        paint.setStrokeJoin(Paint.Join.ROUND);
+        paint.setAntiAlias(true);
 
         path_blue = new Path();
-        paint_blue = new Paint();
-        paint_blue.setStyle(Paint.Style.STROKE);
-        paint_blue.setStrokeWidth(10f);
-        paint_blue.setColor(Color.BLUE);
-        paint_blue.setStrokeJoin(Paint.Join.ROUND);
-        paint_blue.setAntiAlias(true);
+//        paint_blue = new Paint();
+//        paint_blue.setStyle(Paint.Style.STROKE);
+//        paint_blue.setStrokeWidth(10f);
+//        paint_blue.setColor(Color.BLUE);
+//        paint_blue.setStrokeJoin(Paint.Join.ROUND);
+//        paint_blue.setAntiAlias(true);
 
         path_orange = new Path();
-        paint_orange = new Paint();
-        paint_orange.setStyle(Paint.Style.STROKE);
-        paint_orange.setStrokeWidth(10f);
-        paint_orange.setColor(Color.YELLOW);
-        paint_orange.setStrokeJoin(Paint.Join.ROUND);
-        paint_orange.setAntiAlias(true);
+//        paint_orange = new Paint();
+//        paint_orange.setStyle(Paint.Style.STROKE);
+//        paint_orange.setStrokeWidth(10f);
+//        paint_orange.setColor(Color.YELLOW);
+//        paint_orange.setStrokeJoin(Paint.Join.ROUND);
+//        paint_orange.setAntiAlias(true);
 
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.drawPath(path_red,paint_red);
-        canvas.drawPath(path_blue,paint_blue);
-        canvas.drawPath(path_orange,paint_orange);
+        paint.setColor(Color.RED);
+        canvas.drawPath(path_red,paint);
+        paint.setColor(Color.BLUE);
+        canvas.drawPath(path_blue,paint);
+        paint.setColor(Color.YELLOW);
+        canvas.drawPath(path_orange,paint);
     }
 
     @Override
@@ -80,7 +81,7 @@ public class MyView extends View {
                 case MotionEvent.ACTION_MOVE:
                     path_blue.lineTo(eventX,eventY);
             }
-        } else if(btnChecker=="orange"){
+        } else if(btnChecker=="yellow"){
             switch (event.getAction()){
                 case MotionEvent.ACTION_DOWN:
                     path_orange.moveTo(eventX,eventY);
@@ -91,5 +92,9 @@ public class MyView extends View {
         }
         invalidate();
         return true;
+    }
+
+    public void setBtninfo(String color){
+        btnChecker = color;
     }
 }
