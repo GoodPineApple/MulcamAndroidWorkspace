@@ -1,52 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:descendantFocusability="blocksDescendants">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="60sp"
-        android:layout_height="60sp"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/img_contact"
         android:src="@drawable/no_img"
         android:layout_alignParentLeft="true"
-        android:id="@+id/image_contact"
-        android:layout_centerVertical="true"
-        />
+        android:layout_centerVertical="true"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/image_contact"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/grp_text"
+        android:layout_toRightOf="@+id/img_contact"
+        android:layout_centerVertical="true">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="contact_name"
             android:textSize="20sp"
-            android:id="@+id/text_namee"/>
+            android:id="@+id/text_name"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cotact phone"
-            android:id="@+id/text_phone"
-            android:textSize="20sp"/>
+            android:text="phone_num"
+            android:textSize="20sp"
+            android:id="@+id/text_phone"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
         <Button
             android:layout_width="40sp"
             android:layout_height="40sp"
-            android:id="@+id/btn_call"
             android:background="@drawable/phone"
-            />
+            android:id="@+id/btn_call"/>
         <Button
             android:layout_width="40sp"
             android:layout_height="40sp"
             android:background="@drawable/sms"
             android:id="@+id/btn_sms"/>
     </LinearLayout>
+
 </RelativeLayout>
