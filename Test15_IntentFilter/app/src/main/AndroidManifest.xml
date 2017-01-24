@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.taemi.test11_callbook">
+    package="com.example.taemi.test15_intentfilter">
 
     <application
         android:allowBackup="true"
@@ -11,12 +11,9 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.intent.test.CONTACTS"></action>
+
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-
-
         </activity>
     </application>
 
