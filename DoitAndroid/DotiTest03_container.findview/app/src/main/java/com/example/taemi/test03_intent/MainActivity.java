@@ -1,6 +1,5 @@
 package com.example.taemi.test03_intent;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -36,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
-                intent.putExtra("title","love EJ");
-                startActivityForResult(intent,1001);
+//                Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+//                intent.putExtra("title","love EJ");
+//                startActivityForResult(intent,1001);
             }
         });
     }

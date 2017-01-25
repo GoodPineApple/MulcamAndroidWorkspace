@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DotiTest03_container.findview.iml" filepath="$PROJECT_DIR$/DotiTest03_container.findview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DoitTest04_intent.iml" filepath="$PROJECT_DIR$/DoitTest04_intent.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
