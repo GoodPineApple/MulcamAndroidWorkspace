@@ -19,18 +19,19 @@
             android:layout_height="wrap_content"
             android:text="Sample Title"
             android:id="@+id/text_book_title"
-            android:textSize="12pt"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="sample author"
-            android:id="@+id/text_book_author"/>
+            android:id="@+id/text_book_author"
+            android:textSize="5pt"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="sample publisher"
-            android:id="@+id/text_book_publisher"/>
+            android:id="@+id/text_book_publisher"
+            android:textSize="5pt"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
