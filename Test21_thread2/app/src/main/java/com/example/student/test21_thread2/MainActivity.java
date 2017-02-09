@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textThread;
+    private TextView textThread2;
     private Handler handler; // 쓰레드가 보내는 메세지 받아서 처리
 
     @Override
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         textThread = (TextView) findViewById(R.id.text_thread);
         textThread.setText("MainThread ID:" +
                 Thread.currentThread().getId());
+        textThread2 = (TextView) findViewById(R.id.text_thread2);
+        textThread2.setText("MainThread iD:" + Thread.currentThread().getId());
 //////////////////////////////////////////////////////////////
 //        <첫번째 문제점!!>
 //        아래 작업은 메인 쓰레드가 sleep에 걸려서 화면에 그리는 작업이
@@ -46,8 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 // 어떻게 반응할지 작성하는 공간
                 if(msg.what == 200){
                     textThread.setText("진행중:"+msg.arg1);
+                    textThread2.setText("진행중:"+msg.arg2);
                 }else if(msg.what == 999){
                     textThread.setText("카운트 종료!!");
+                    textThread2.setText("카운트 종료!!");
                 }
 
             }
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         // 화면에 뭔가를 변경해 달라는 메세지를 보내야함.
         @Override
         public void run() {
-            for(int i=0; i<=10; i++){
+            for(int i=0, j=10; i<=10; i++){
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -89,7 +94,9 @@ public class MainActivity extends AppCompatActivity {
                 Message msg = new Message();
                 msg.what = 200; // 카운트 진행중임을 알리는 코드
                 msg.arg1 = i; // 카운트값
+                msg.arg2 = j;
                 handler.sendMessage(msg); // 핸들러에게 보냄.
+                j--;
             }
 
             Message msg = new Message();

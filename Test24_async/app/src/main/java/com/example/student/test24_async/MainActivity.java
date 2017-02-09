@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         protected Bitmap doInBackground(Void... params) {
             Bitmap bitmap = null;
             InputStream is = null;
-            String imgUrl = "http://imgnews.naver.net/image/421/2017/02/01/0002537796_001_20170201151610654.jpg?type=w540";
+            String imgUrl = "http://rgo4.com/files/attach/images/2676751/345/921/002/d3540f585dee5aeb7d4f8e0b2f794dc1.jpg";
 
             try {
                 // http 요청 보내서 응답 이미지를 bitmap으로 받는 작업
